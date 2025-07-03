@@ -1,0 +1,63 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result | GrainPalette</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f4f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-box {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #004d99;
+            margin-bottom: 15px;
+        }
+
+        img {
+            margin-top: 15px;
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #0073e6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        a:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Predicted Rice Type: <strong>{{ prediction }}</strong></h2>
+        <img src="{{ user_image }}" alt="Uploaded Rice Image">
+        <br>
+        <a href="/">Try Another Image</a>
+    </div>
+</body>
+</html>
